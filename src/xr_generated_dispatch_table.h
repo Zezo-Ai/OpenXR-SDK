@@ -850,6 +850,9 @@ struct XrGeneratedDispatchTable {
     // ---- XR_EXT_haptic_parametric extension commands
     PFN_xrHapticParametricGetPropertiesEXT HapticParametricGetPropertiesEXT;
 
+    // ---- XR_SONY_swapchain_color_space extension commands
+    PFN_xrEnumerateColorSpacesSONY EnumerateColorSpacesSONY;
+
     // ---- XR_EXT_spatial_persistence_operations extension commands
     PFN_xrPersistSpatialEntityAsyncEXT PersistSpatialEntityAsyncEXT;
     PFN_xrPersistSpatialEntityCompleteEXT PersistSpatialEntityCompleteEXT;

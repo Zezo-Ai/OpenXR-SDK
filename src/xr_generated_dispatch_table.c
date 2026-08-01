@@ -844,6 +844,9 @@ void GeneratedXrPopulateDispatchTable(struct XrGeneratedDispatchTable *table,
     // ---- XR_EXT_haptic_parametric extension commands
     (get_inst_proc_addr(instance, "xrHapticParametricGetPropertiesEXT", (PFN_xrVoidFunction*)&table->HapticParametricGetPropertiesEXT));
 
+    // ---- XR_SONY_swapchain_color_space extension commands
+    (get_inst_proc_addr(instance, "xrEnumerateColorSpacesSONY", (PFN_xrVoidFunction*)&table->EnumerateColorSpacesSONY));
+
     // ---- XR_EXT_spatial_persistence_operations extension commands
     (get_inst_proc_addr(instance, "xrPersistSpatialEntityAsyncEXT", (PFN_xrVoidFunction*)&table->PersistSpatialEntityAsyncEXT));
     (get_inst_proc_addr(instance, "xrPersistSpatialEntityCompleteEXT", (PFN_xrVoidFunction*)&table->PersistSpatialEntityCompleteEXT));
