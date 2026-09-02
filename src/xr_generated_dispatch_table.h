@@ -193,6 +193,9 @@ struct XrGeneratedDispatchTable {
     // ---- XR_KHR_locate_spaces extension commands
     PFN_xrLocateSpacesKHR LocateSpacesKHR;
 
+    // ---- XR_KHR_extended_result_name_lengths extension commands
+    PFN_xrResultToString2KHR ResultToString2KHR;
+
     // ---- XR_EXT_performance_settings extension commands
     PFN_xrPerfSettingsSetPerformanceLevelEXT PerfSettingsSetPerformanceLevelEXT;
 
@@ -640,6 +643,11 @@ struct XrGeneratedDispatchTable {
     PFN_xrStartBodyTrackingCalibrationAppBD StartBodyTrackingCalibrationAppBD;
     PFN_xrGetBodyTrackingStateBD GetBodyTrackingStateBD;
 
+    // ---- XR_BD_spatial_light_estimation extension commands
+    PFN_xrEnumerateEnvironmentTextureResolutionsBD EnumerateEnvironmentTextureResolutionsBD;
+    PFN_xrEnumerateEnvironmentTexturePixelFormatsBD EnumerateEnvironmentTexturePixelFormatsBD;
+    PFN_xrEnumerateEnvironmentTextureTransferTypesBD EnumerateEnvironmentTextureTransferTypesBD;
+
     // ---- XR_BD_spatial_audio_rendering extension commands
     PFN_xrEnumerateSupportedAudioSampleRateBD EnumerateSupportedAudioSampleRateBD;
     PFN_xrQueryFramesPerBufferRangeBD QueryFramesPerBufferRangeBD;
@@ -838,6 +846,24 @@ struct XrGeneratedDispatchTable {
     // ---- XR_EXT_stationary_reference_space extension commands
     PFN_xrGetStationaryReferenceSpaceGenerationIdEXT GetStationaryReferenceSpaceGenerationIdEXT;
 
+    // ---- XR_BD_camera_image extension commands
+    PFN_xrEnumerateAvailableCamerasBD EnumerateAvailableCamerasBD;
+    PFN_xrEnumerateCameraPropertyTypesBD EnumerateCameraPropertyTypesBD;
+    PFN_xrGetCameraPropertiesBD GetCameraPropertiesBD;
+    PFN_xrEnumerateCameraCapabilityTypesBD EnumerateCameraCapabilityTypesBD;
+    PFN_xrGetCameraSupportedCapabilitiesBD GetCameraSupportedCapabilitiesBD;
+    PFN_xrCreateCameraDeviceAsyncBD CreateCameraDeviceAsyncBD;
+    PFN_xrCreateCameraDeviceCompleteBD CreateCameraDeviceCompleteBD;
+    PFN_xrDestroyCameraDeviceBD DestroyCameraDeviceBD;
+    PFN_xrCreateCameraCaptureSessionAsyncBD CreateCameraCaptureSessionAsyncBD;
+    PFN_xrCreateCameraCaptureSessionCompleteBD CreateCameraCaptureSessionCompleteBD;
+    PFN_xrDestroyCameraCaptureSessionBD DestroyCameraCaptureSessionBD;
+    PFN_xrBeginCameraCaptureBD BeginCameraCaptureBD;
+    PFN_xrEndCameraCaptureBD EndCameraCaptureBD;
+    PFN_xrAcquireCameraImageBD AcquireCameraImageBD;
+    PFN_xrGetCameraImageDataBD GetCameraImageDataBD;
+    PFN_xrReleaseCameraImageBD ReleaseCameraImageBD;
+
     // ---- XR_EXT_spatial_anchor extension commands
     PFN_xrCreateSpatialAnchorEXT CreateSpatialAnchorEXT;
 
@@ -853,11 +879,20 @@ struct XrGeneratedDispatchTable {
     // ---- XR_SONY_swapchain_color_space extension commands
     PFN_xrEnumerateColorSpacesSONY EnumerateColorSpacesSONY;
 
+    // ---- XR_SONY_hdr_metadata extension commands
+    PFN_xrSetHdrMetadataSONY SetHdrMetadataSONY;
+
     // ---- XR_EXT_spatial_persistence_operations extension commands
     PFN_xrPersistSpatialEntityAsyncEXT PersistSpatialEntityAsyncEXT;
     PFN_xrPersistSpatialEntityCompleteEXT PersistSpatialEntityCompleteEXT;
     PFN_xrUnpersistSpatialEntityAsyncEXT UnpersistSpatialEntityAsyncEXT;
     PFN_xrUnpersistSpatialEntityCompleteEXT UnpersistSpatialEntityCompleteEXT;
+
+    // ---- XR_EXT_spatial_image_tracking extension commands
+    PFN_xrEnumerateSpatialReferenceImageFormatsEXT EnumerateSpatialReferenceImageFormatsEXT;
+    PFN_xrCreateSpatialImageTrackingDatabaseAsyncEXT CreateSpatialImageTrackingDatabaseAsyncEXT;
+    PFN_xrCreateSpatialImageTrackingDatabaseCompleteEXT CreateSpatialImageTrackingDatabaseCompleteEXT;
+    PFN_xrDestroySpatialImageTrackingDatabaseEXT DestroySpatialImageTrackingDatabaseEXT;
 
     // ---- XR_ANDROID_spatial_discovery_raycast extension commands
     PFN_xrCreateSpatialRaycastSnapshotANDROID CreateSpatialRaycastSnapshotANDROID;
@@ -885,6 +920,21 @@ struct XrGeneratedDispatchTable {
     PFN_xrCreateGeospatialAnchorANDROID CreateGeospatialAnchorANDROID;
     PFN_xrCreateSurfaceAnchorAsyncANDROID CreateSurfaceAnchorAsyncANDROID;
     PFN_xrCreateSurfaceAnchorCompleteANDROID CreateSurfaceAnchorCompleteANDROID;
+
+    // ---- XR_EXT_spatial_container extension commands
+    PFN_xrCreateSpatialContainerEXT CreateSpatialContainerEXT;
+    PFN_xrDestroySpatialContainerEXT DestroySpatialContainerEXT;
+    PFN_xrCreateSpatialContainerSpaceEXT CreateSpatialContainerSpaceEXT;
+    PFN_xrRequestSpatialContainerVisibleEXT RequestSpatialContainerVisibleEXT;
+    PFN_xrRequestSpatialContainerBoundsModeEXT RequestSpatialContainerBoundsModeEXT;
+    PFN_xrGetSpatialContainerBoundsEXT GetSpatialContainerBoundsEXT;
+    PFN_xrGetSpatialContainerStateEXT GetSpatialContainerStateEXT;
+    PFN_xrEnumerateSupportedSpatialContainerGraphicsPresentationsEXT EnumerateSupportedSpatialContainerGraphicsPresentationsEXT;
+
+    // ---- XR_EXT_spatial_container_self_rendering extension commands
+    PFN_xrBeginSpatialContainerRenderingEXT BeginSpatialContainerRenderingEXT;
+    PFN_xrEndSpatialContainerRenderingEXT EndSpatialContainerRenderingEXT;
+    PFN_xrLocateSpatialContainerViewsEXT LocateSpatialContainerViewsEXT;
 };
 
 

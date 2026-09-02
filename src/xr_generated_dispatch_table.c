@@ -187,6 +187,9 @@ void GeneratedXrPopulateDispatchTable(struct XrGeneratedDispatchTable *table,
     // ---- XR_KHR_locate_spaces extension commands
     (get_inst_proc_addr(instance, "xrLocateSpacesKHR", (PFN_xrVoidFunction*)&table->LocateSpacesKHR));
 
+    // ---- XR_KHR_extended_result_name_lengths extension commands
+    (get_inst_proc_addr(instance, "xrResultToString2KHR", (PFN_xrVoidFunction*)&table->ResultToString2KHR));
+
     // ---- XR_EXT_performance_settings extension commands
     (get_inst_proc_addr(instance, "xrPerfSettingsSetPerformanceLevelEXT", (PFN_xrVoidFunction*)&table->PerfSettingsSetPerformanceLevelEXT));
 
@@ -634,6 +637,11 @@ void GeneratedXrPopulateDispatchTable(struct XrGeneratedDispatchTable *table,
     (get_inst_proc_addr(instance, "xrStartBodyTrackingCalibrationAppBD", (PFN_xrVoidFunction*)&table->StartBodyTrackingCalibrationAppBD));
     (get_inst_proc_addr(instance, "xrGetBodyTrackingStateBD", (PFN_xrVoidFunction*)&table->GetBodyTrackingStateBD));
 
+    // ---- XR_BD_spatial_light_estimation extension commands
+    (get_inst_proc_addr(instance, "xrEnumerateEnvironmentTextureResolutionsBD", (PFN_xrVoidFunction*)&table->EnumerateEnvironmentTextureResolutionsBD));
+    (get_inst_proc_addr(instance, "xrEnumerateEnvironmentTexturePixelFormatsBD", (PFN_xrVoidFunction*)&table->EnumerateEnvironmentTexturePixelFormatsBD));
+    (get_inst_proc_addr(instance, "xrEnumerateEnvironmentTextureTransferTypesBD", (PFN_xrVoidFunction*)&table->EnumerateEnvironmentTextureTransferTypesBD));
+
     // ---- XR_BD_spatial_audio_rendering extension commands
     (get_inst_proc_addr(instance, "xrEnumerateSupportedAudioSampleRateBD", (PFN_xrVoidFunction*)&table->EnumerateSupportedAudioSampleRateBD));
     (get_inst_proc_addr(instance, "xrQueryFramesPerBufferRangeBD", (PFN_xrVoidFunction*)&table->QueryFramesPerBufferRangeBD));
@@ -832,6 +840,24 @@ void GeneratedXrPopulateDispatchTable(struct XrGeneratedDispatchTable *table,
     // ---- XR_EXT_stationary_reference_space extension commands
     (get_inst_proc_addr(instance, "xrGetStationaryReferenceSpaceGenerationIdEXT", (PFN_xrVoidFunction*)&table->GetStationaryReferenceSpaceGenerationIdEXT));
 
+    // ---- XR_BD_camera_image extension commands
+    (get_inst_proc_addr(instance, "xrEnumerateAvailableCamerasBD", (PFN_xrVoidFunction*)&table->EnumerateAvailableCamerasBD));
+    (get_inst_proc_addr(instance, "xrEnumerateCameraPropertyTypesBD", (PFN_xrVoidFunction*)&table->EnumerateCameraPropertyTypesBD));
+    (get_inst_proc_addr(instance, "xrGetCameraPropertiesBD", (PFN_xrVoidFunction*)&table->GetCameraPropertiesBD));
+    (get_inst_proc_addr(instance, "xrEnumerateCameraCapabilityTypesBD", (PFN_xrVoidFunction*)&table->EnumerateCameraCapabilityTypesBD));
+    (get_inst_proc_addr(instance, "xrGetCameraSupportedCapabilitiesBD", (PFN_xrVoidFunction*)&table->GetCameraSupportedCapabilitiesBD));
+    (get_inst_proc_addr(instance, "xrCreateCameraDeviceAsyncBD", (PFN_xrVoidFunction*)&table->CreateCameraDeviceAsyncBD));
+    (get_inst_proc_addr(instance, "xrCreateCameraDeviceCompleteBD", (PFN_xrVoidFunction*)&table->CreateCameraDeviceCompleteBD));
+    (get_inst_proc_addr(instance, "xrDestroyCameraDeviceBD", (PFN_xrVoidFunction*)&table->DestroyCameraDeviceBD));
+    (get_inst_proc_addr(instance, "xrCreateCameraCaptureSessionAsyncBD", (PFN_xrVoidFunction*)&table->CreateCameraCaptureSessionAsyncBD));
+    (get_inst_proc_addr(instance, "xrCreateCameraCaptureSessionCompleteBD", (PFN_xrVoidFunction*)&table->CreateCameraCaptureSessionCompleteBD));
+    (get_inst_proc_addr(instance, "xrDestroyCameraCaptureSessionBD", (PFN_xrVoidFunction*)&table->DestroyCameraCaptureSessionBD));
+    (get_inst_proc_addr(instance, "xrBeginCameraCaptureBD", (PFN_xrVoidFunction*)&table->BeginCameraCaptureBD));
+    (get_inst_proc_addr(instance, "xrEndCameraCaptureBD", (PFN_xrVoidFunction*)&table->EndCameraCaptureBD));
+    (get_inst_proc_addr(instance, "xrAcquireCameraImageBD", (PFN_xrVoidFunction*)&table->AcquireCameraImageBD));
+    (get_inst_proc_addr(instance, "xrGetCameraImageDataBD", (PFN_xrVoidFunction*)&table->GetCameraImageDataBD));
+    (get_inst_proc_addr(instance, "xrReleaseCameraImageBD", (PFN_xrVoidFunction*)&table->ReleaseCameraImageBD));
+
     // ---- XR_EXT_spatial_anchor extension commands
     (get_inst_proc_addr(instance, "xrCreateSpatialAnchorEXT", (PFN_xrVoidFunction*)&table->CreateSpatialAnchorEXT));
 
@@ -847,11 +873,20 @@ void GeneratedXrPopulateDispatchTable(struct XrGeneratedDispatchTable *table,
     // ---- XR_SONY_swapchain_color_space extension commands
     (get_inst_proc_addr(instance, "xrEnumerateColorSpacesSONY", (PFN_xrVoidFunction*)&table->EnumerateColorSpacesSONY));
 
+    // ---- XR_SONY_hdr_metadata extension commands
+    (get_inst_proc_addr(instance, "xrSetHdrMetadataSONY", (PFN_xrVoidFunction*)&table->SetHdrMetadataSONY));
+
     // ---- XR_EXT_spatial_persistence_operations extension commands
     (get_inst_proc_addr(instance, "xrPersistSpatialEntityAsyncEXT", (PFN_xrVoidFunction*)&table->PersistSpatialEntityAsyncEXT));
     (get_inst_proc_addr(instance, "xrPersistSpatialEntityCompleteEXT", (PFN_xrVoidFunction*)&table->PersistSpatialEntityCompleteEXT));
     (get_inst_proc_addr(instance, "xrUnpersistSpatialEntityAsyncEXT", (PFN_xrVoidFunction*)&table->UnpersistSpatialEntityAsyncEXT));
     (get_inst_proc_addr(instance, "xrUnpersistSpatialEntityCompleteEXT", (PFN_xrVoidFunction*)&table->UnpersistSpatialEntityCompleteEXT));
+
+    // ---- XR_EXT_spatial_image_tracking extension commands
+    (get_inst_proc_addr(instance, "xrEnumerateSpatialReferenceImageFormatsEXT", (PFN_xrVoidFunction*)&table->EnumerateSpatialReferenceImageFormatsEXT));
+    (get_inst_proc_addr(instance, "xrCreateSpatialImageTrackingDatabaseAsyncEXT", (PFN_xrVoidFunction*)&table->CreateSpatialImageTrackingDatabaseAsyncEXT));
+    (get_inst_proc_addr(instance, "xrCreateSpatialImageTrackingDatabaseCompleteEXT", (PFN_xrVoidFunction*)&table->CreateSpatialImageTrackingDatabaseCompleteEXT));
+    (get_inst_proc_addr(instance, "xrDestroySpatialImageTrackingDatabaseEXT", (PFN_xrVoidFunction*)&table->DestroySpatialImageTrackingDatabaseEXT));
 
     // ---- XR_ANDROID_spatial_discovery_raycast extension commands
     (get_inst_proc_addr(instance, "xrCreateSpatialRaycastSnapshotANDROID", (PFN_xrVoidFunction*)&table->CreateSpatialRaycastSnapshotANDROID));
@@ -879,6 +914,21 @@ void GeneratedXrPopulateDispatchTable(struct XrGeneratedDispatchTable *table,
     (get_inst_proc_addr(instance, "xrCreateGeospatialAnchorANDROID", (PFN_xrVoidFunction*)&table->CreateGeospatialAnchorANDROID));
     (get_inst_proc_addr(instance, "xrCreateSurfaceAnchorAsyncANDROID", (PFN_xrVoidFunction*)&table->CreateSurfaceAnchorAsyncANDROID));
     (get_inst_proc_addr(instance, "xrCreateSurfaceAnchorCompleteANDROID", (PFN_xrVoidFunction*)&table->CreateSurfaceAnchorCompleteANDROID));
+
+    // ---- XR_EXT_spatial_container extension commands
+    (get_inst_proc_addr(instance, "xrCreateSpatialContainerEXT", (PFN_xrVoidFunction*)&table->CreateSpatialContainerEXT));
+    (get_inst_proc_addr(instance, "xrDestroySpatialContainerEXT", (PFN_xrVoidFunction*)&table->DestroySpatialContainerEXT));
+    (get_inst_proc_addr(instance, "xrCreateSpatialContainerSpaceEXT", (PFN_xrVoidFunction*)&table->CreateSpatialContainerSpaceEXT));
+    (get_inst_proc_addr(instance, "xrRequestSpatialContainerVisibleEXT", (PFN_xrVoidFunction*)&table->RequestSpatialContainerVisibleEXT));
+    (get_inst_proc_addr(instance, "xrRequestSpatialContainerBoundsModeEXT", (PFN_xrVoidFunction*)&table->RequestSpatialContainerBoundsModeEXT));
+    (get_inst_proc_addr(instance, "xrGetSpatialContainerBoundsEXT", (PFN_xrVoidFunction*)&table->GetSpatialContainerBoundsEXT));
+    (get_inst_proc_addr(instance, "xrGetSpatialContainerStateEXT", (PFN_xrVoidFunction*)&table->GetSpatialContainerStateEXT));
+    (get_inst_proc_addr(instance, "xrEnumerateSupportedSpatialContainerGraphicsPresentationsEXT", (PFN_xrVoidFunction*)&table->EnumerateSupportedSpatialContainerGraphicsPresentationsEXT));
+
+    // ---- XR_EXT_spatial_container_self_rendering extension commands
+    (get_inst_proc_addr(instance, "xrBeginSpatialContainerRenderingEXT", (PFN_xrVoidFunction*)&table->BeginSpatialContainerRenderingEXT));
+    (get_inst_proc_addr(instance, "xrEndSpatialContainerRenderingEXT", (PFN_xrVoidFunction*)&table->EndSpatialContainerRenderingEXT));
+    (get_inst_proc_addr(instance, "xrLocateSpatialContainerViewsEXT", (PFN_xrVoidFunction*)&table->LocateSpatialContainerViewsEXT));
 }
 
 
